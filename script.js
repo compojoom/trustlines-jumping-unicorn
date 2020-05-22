@@ -1,5 +1,6 @@
 var unicorn = document.getElementById("unicorn")
 var block = document.getElementById("block")
+var end = document.getElementById("end")
 
 function jump() {
     if(unicorn.classList != "animate") {
@@ -8,6 +9,10 @@ function jump() {
     setTimeout(function() {
         unicorn.classList.remove("animate")
     }, 500)
+}
+
+function restart() {
+    location.reload();
 }
 
 
@@ -20,9 +25,6 @@ var checkDead = setInterval(function() {
     if(blockLeft < 50 && blockLeft > 0 && unicornTop >= 130) {
         block.style.animation = "none"
         block.style.display = "none"
-
-        if(confirm("Unicorn always wins :P. Do you want to try again?")) {
-            location.reload();
-        }
+        end.classList.add("visible")
     }
 }, 10)

@@ -35,6 +35,17 @@
     animation: jump 500ms infinite;
 }
 
+#end {
+    display: none;
+    background-color: red;
+    color: #FFF;
+    width: 500px;
+    margin-top: 20px;
+}
+.visible {
+    display: block!important;
+}
+
 @keyframes jump {
     0% {top: 150px}
     50% {top: 100px}
