@@ -21,7 +21,8 @@ var checkDead = setInterval(function() {
         block.style.animation = "none"
         block.style.display = "none"
 
-        alert("Unicorn always wins :P")
-        location.reload();
+        if(confirm("Unicorn always wins :P. Do you want to try again?")) {
+            location.reload();
+        }
     }
 }, 10)
